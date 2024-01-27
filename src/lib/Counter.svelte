@@ -1,10 +1,13 @@
 <script lang="ts">
-  let count: number = 0
+  let count: number = 0;
+  $: doubleCount = count * 2
+
   const increment = () => {
-    count += 1
-  }
+    count += 1;
+  };
 </script>
 
-<button on:click={increment}>
-  count is {count}
-</button>
+<h3>count is {count > 0 ? count : "empty!"}</h3>
+<h3>{doubleCount}</h3>
+<button on:click={increment}>increment!</button>
+<button on:click={() => count--}>decrement!</button>
