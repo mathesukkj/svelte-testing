@@ -1,6 +1,12 @@
 <script lang="ts">
   let count: number = 0;
   $: doubleCount = count * 2
+  $: {
+    if(count > 20) {
+      console.log("passou de 20 kkkkkkkkkkk ce ta doooido")
+    }
+    console.log(count)
+  }
 
   const increment = () => {
     count += 1;
