@@ -16,7 +16,6 @@
 <li>{todo}</li>
 {/each}
 
-
 <style>  
   li {
     list-style: none;
