@@ -2,7 +2,7 @@
   let src = "./src/assets/svelte.svg";
   let text = "<h2>state</h2>";
 
-  let todos = ["a", "b", "C"];
+  let todos: string[] = [];
 
   $: console.log(todos);
 
@@ -11,8 +11,8 @@
   };
 </script>
 
-<button on:click={() => addTodo("d")}>Add todo</button>
-{#each todos as todo}
+<button on:click={() => addTodo(Math.random().toFixed(4))}>Add todo</button>
+{#each todos as todo (todo)}
 <li>{todo}</li>
 {/each}
 

@@ -1,5 +1,6 @@
 <script lang="ts">
   import Counter from "./lib/Counter.svelte";
+  import Todos from "./lib/Todos.svelte";
 
 
   let src = "./src/assets/svelte.svg";
@@ -9,8 +10,7 @@
 <img {src} alt="svelte" />
 <h1>{@html text}</h1>
 
-<Counter />
-
+<Todos />
 <style>
   h1 {
     color: orange;
