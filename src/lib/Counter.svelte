@@ -17,3 +17,5 @@
 <h3>{doubleCount}</h3>
 <button on:click={increment}>increment!</button>
 <button on:click={() => count--}>decrement!</button>
+<br/>
+<br/>
