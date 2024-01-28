@@ -1,14 +1,19 @@
 <script lang="ts">
-  import Counter from "./lib/Counter.svelte";
+  import type { ShowPropsProps } from "./@types/ShowProps";
+import ShowProps from "./lib/ShowProps.svelte";
 
   let src = "./src/assets/svelte.svg";
   let text = "<h2>state</h2>";
+
+  let propsToShow: ShowPropsProps = {
+    number: 10,
+    text: "hii"
+  }
 </script>
 
 <img {src} alt="svelte" />
 <h1>{@html text}</h1>
-<Counter />
-
+<ShowProps props={propsToShow} />
 
 <style>
   h1 {
