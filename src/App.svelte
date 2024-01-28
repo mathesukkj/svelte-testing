@@ -1,14 +1,18 @@
 <script lang="ts">
-  import Pointer from "./lib/Pointer.svelte";
+  import Dispatcher from "./lib/Dispatcher.svelte";
 
   let src = "./src/assets/svelte.svg";
   let text = "<h2>state</h2>";
+
+  function handleDispatch(e: any) {
+    alert(e.detail.text)
+  }
 </script>
 
 <img {src} alt="svelte" />
 <h1>{@html text}</h1>
 
-<Pointer />
+<Dispatcher on:dispatched={handleDispatch} />
 
 <style>
   h1 {
