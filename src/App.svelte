@@ -1,5 +1,5 @@
 <script lang="ts">
-  import Lifecycle from "./lib/Lifecycle.svelte";
+  import Counter from "./lib/Counter.svelte";
 
   let src = "./src/assets/svelte.svg";
   let text = "<h2>state</h2>";
@@ -8,7 +8,7 @@
 <img {src} alt="svelte" />
 <h1>{@html text}</h1>
 
-<Lifecycle />
+<Counter />
 
 <style>
   h1 {
